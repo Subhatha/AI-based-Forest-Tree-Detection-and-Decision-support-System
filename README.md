@@ -213,7 +213,7 @@ The system then performs post-processing analysis to determine:
 ---
 
 # Thesis Information
-
+Student name - Subhatha Kaumud Senanayake
 Bachelor Thesis Project  
 Computer Science  
 Riga Technical University (RTU)
@@ -221,5 +221,5 @@ Riga Technical University (RTU)
 Project Type:
 
 ```text
-AI-Based Intelligent Forestry Decision Support System
+AI based Forest Tree Detection and Decision support System
 ```
