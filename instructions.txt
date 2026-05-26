@@ -1,0 +1,219 @@
+```txt
+AI-based Forest Tree Detection and Decision support System
+====================================
+
+Bachelor Thesis Project
+Computer Science - Riga Technical University (RTU)
+
+--------------------------------------------------
+PROJECT OVERVIEW
+--------------------------------------------------
+
+This project is an AI-based forestry analysis and decision-support system.
+
+The system processes forest walkthrough videos and performs:
+
+- automatic frame extraction
+- tree detection using YOLOv8
+- tree tracking
+- CUT / KEEP decision analysis
+- 3D forest mapping
+- statistics generation
+- processed video generation
+
+The system is designed as a prototype intelligent forestry automation pipeline for future autonomous forest thinning applications.
+
+--------------------------------------------------
+MAIN TECHNOLOGIES
+--------------------------------------------------
+
+- Python
+- YOLOv8 (Ultralytics)
+- OpenCV
+- Tkinter
+- Plotly
+- NumPy
+- Matplotlib
+- Roboflow
+
+--------------------------------------------------
+STEP 1 - INSTALL PYTHON
+--------------------------------------------------
+
+Download and install Python 3.11:
+
+https://www.python.org/downloads/
+
+IMPORTANT:
+During installation enable:
+
+[✓] Add Python to PATH
+
+Verify installation:
+
+python --version
+
+--------------------------------------------------
+STEP 2 - OPEN PROJECT FOLDER
+--------------------------------------------------
+
+Open terminal / PowerShell inside the project folder.
+
+Example:
+
+cd Desktop/forest
+
+--------------------------------------------------
+STEP 3 - INSTALL REQUIRED LIBRARIES
+--------------------------------------------------
+
+Run:
+
+pip install ultralytics
+pip install opencv-python
+pip install plotly
+pip install matplotlib
+pip install numpy
+
+--------------------------------------------------
+STEP 4 - DATASET INFORMATION
+--------------------------------------------------
+
+The submitted project contains only a reduced dataset version due to dataset size limitations.
+
+The full dataset was not included in the submission because of upload size and time constraints.
+
+Users may:
+- have to train the model one time with the instructions below
+
+- one video for testing is uploaded at this link (Google Drive)
+(https://drive.google.com/drive/folders/14wwgRTLmv8_QjTF_npIGPdhPNteIi8AU?usp=drive_link)
+
+- You can clone the project using this Github URL
+("https://github.com/Subhatha/AI-based-Forest-Tree-Detection-and-Decision-support-System.git")
+or (https://github.com/Subhatha/AI-based-Forest-Tree-Detection-and-Decision-support-System) for the project file
+
+
+Dataset structure:
+
+dataset/
+│
+├── train/
+├── valid/
+├── test/
+└── data.yaml
+
+--------------------------------------------------
+STEP 5 - TRAIN THE MODEL
+--------------------------------------------------
+
+The trained YOLO model files were not included in the submission.
+
+The user must train the model locally before running the full system.
+
+Run:
+
+yolo task=detect mode=train model=yolov8n.pt data="dataset/data.yaml" epochs=50 imgsz=640
+
+After training, model files will be generated automatically in:
+
+runs/detect/train/weights/
+
+Main trained model:
+
+best.pt
+
+--------------------------------------------------
+STEP 6 - FOREST VIDEO INPUT
+--------------------------------------------------
+
+Forest walkthrough videos are not included directly inside the project folder.
+
+Users may:
+- use their own forest video
+OR
+- use the sample video link provided separately
+
+Recommended:
+- MP4 format
+- forest walking footage
+- visible tree trunks
+- stable camera movement
+
+--------------------------------------------------
+STEP 7 - RUN THE SYSTEM
+--------------------------------------------------
+
+Run:
+
+python forest_gui.py
+
+--------------------------------------------------
+STEP 8 - SYSTEM WORKFLOW
+--------------------------------------------------
+
+1. Select forest video
+2. Extract video frames
+3. Detect trees using YOLOv8
+4. Track trees between frames
+5. Generate CUT / KEEP decisions
+6. Create processed output video
+7. Generate 3D forest maps
+8. Generate statistics report
+
+--------------------------------------------------
+OUTPUT FILES
+--------------------------------------------------
+
+Generated outputs are saved in:
+
+gui_output/
+
+Includes:
+
+- extracted frames
+- detected frames
+- processed output video
+- statistics report
+- static 3D map
+- interactive 3D map
+
+--------------------------------------------------
+SYSTEM WORKFLOW
+--------------------------------------------------
+
+Video Input
+→ Frame Extraction
+→ Tree Detection
+→ Tree Tracking
+→ Spatial Analysis
+→ CUT / KEEP Decision
+→ 3D Mapping
+→ Report Generation
+
+--------------------------------------------------
+CURRENT LIMITATIONS
+--------------------------------------------------
+
+- Relative distances are estimated from image coordinates
+- No real GPS integration yet
+- No LiDAR integration yet
+- Forest overlap reduces detection accuracy
+- Dataset size is limited
+- The project is a prototype research system
+
+--------------------------------------------------
+FUTURE IMPROVEMENTS
+--------------------------------------------------
+
+- GPS integration
+- LiDAR integration
+- Real-world distance estimation
+- Real-time processing
+- Improved object tracking
+- Advanced forest health analysis
+
+--------------------------------------------------
+END OF DOCUMENT
+--------------------------------------------------
+```
